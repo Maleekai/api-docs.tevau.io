@@ -1,0 +1,67 @@
+# Tevau-Api文档
+
+## Docs
+- [Get started](https://api-docs.tevau.io/6454735m0.md): 
+- [签名说明](https://api-docs.tevau.io/6506866m0.md): 
+- [交易说明](https://api-docs.tevau.io/6454736m0.md): 
+- [FAQ](https://api-docs.tevau.io/6928105m0.md): 
+- [02. KYC](https://api-docs.tevau.io/54478261f0.md): 
+- [09. Fiat代收代付](https://api-docs.tevau.io/73861624f0.md): 
+
+## API Docs
+- 01. 客户 [1.1 创建客户](https://api-docs.tevau.io/283621425e0.md): 通过唯一的标识id，获取对应的Tevau客户id，后续可通过该客户userCode提交KYC、申请卡、绑定卡等操作；
+- 01. 客户 [1.2 查询客户](https://api-docs.tevau.io/283621426e0.md): 通过Tevau的客户userCode查询此客户的状态相关信息
+- 02. KYC [2.1 V1提交客户KYC信息](https://api-docs.tevau.io/283621428e0.md): 1. 主要用于提交客户KYC的基础信息；
+- 02. KYC [2.2 获取活体认证URL](https://api-docs.tevau.io/283621429e0.md): 1. 提交客户KYC信息后，再通过此接口获取活体认证url；
+- 02. KYC [2.3 查询活体认证结果](https://api-docs.tevau.io/283621430e0.md): 1.用于查询客户是否完成活体认证，完成后才会提交审核；
+- 02. KYC [2.4 查询客户KYC状态和信息](https://api-docs.tevau.io/283621431e0.md): 用于查询指定客户的KYC状态及其KYC的信息；
+- 02. KYC [2.5 [Sandbox] 模拟KYC审核](https://api-docs.tevau.io/333381858e0.md): 用于模拟KYC审核，仅Sandbox环境中可用。
+- 02. KYC [2.6 创建文档文件](https://api-docs.tevau.io/357315783e0.md): 
+- 02. KYC [2.7 上传文档文件](https://api-docs.tevau.io/357320828e0.md): 
+- 02. KYC [2.8 V2提交客户KYC信息](https://api-docs.tevau.io/357310073e0.md): 1. 主要用于提交客户KYC的基础信息；
+- 03. 卡片 [3.1 创建卡](https://api-docs.tevau.io/283621432e0.md): 此接口可以在线申请虚拟卡或实体卡，UserCode每五秒限流。
+- 03. 卡片 [3.2 查询客户的卡](https://api-docs.tevau.io/283621433e0.md): 用于查询指定客户拥有的所有卡
+- 03. 卡片 [3.3 调整卡余额](https://api-docs.tevau.io/283621434e0.md): 用于增加或减少卡的余额
+- 03. 卡片 [3.4 查询卡详情](https://api-docs.tevau.io/283621435e0.md): 用于查询指定卡的详细信息
+- 03. 卡片 [3.5 绑定实体卡](https://api-docs.tevau.io/283621436e0.md): 此接口用于线下获得一批卡后绑定实体卡，无需Tevau发货，需补充账单地址，卡片绑定成功需调用3.9激活实体卡接口。
+- 03. 卡片 [3.6 注销卡](https://api-docs.tevau.io/283621437e0.md): 此接口可以注销卡
+- 03. 卡片 [3.7 冻结卡](https://api-docs.tevau.io/283621438e0.md): 此接口可以冻结卡。
+- 03. 卡片 [3.8 解冻卡](https://api-docs.tevau.io/286541703e0.md): 此接口可以解冻卡。
+- 03. 卡片 [3.9 激活实体卡](https://api-docs.tevau.io/283621440e0.md): 此接口可以激活实体卡
+- 03. 卡片 [3.10 查询卡PAN-HTML](https://api-docs.tevau.io/283621441e0.md): 此接口可以查询卡PAN，含卡号、CVV、有效期，返回的是个url链接，在url上展示这些信息。
+- 03. 卡片 [3.11 查PIN码](https://api-docs.tevau.io/283621442e0.md): 此接口可以查询卡PIN，卡PIN是在ATM取款时或者POS刷卡时使用的密码
+- 03. 卡片 [3.12 查询卡限额](https://api-docs.tevau.io/283621443e0.md): 此接口可以查询卡交易单笔、年月日限额。
+- 03. 卡片 [3.13 调整卡费用](https://api-docs.tevau.io/289671420e0.md): 此接口可以调整卡交易的费用：
+- 03. 卡片 [3.14 查询卡费用](https://api-docs.tevau.io/289331420e0.md): 此接口可以查询卡交易费用：1、交易授权费 2、FX费用 3、ATM费用
+- 03. 卡片 [3.15 卡交易3DS授权确认、取消](https://api-docs.tevau.io/288078335e0.md): 此接口卡交易3DS授权进行确认、取消。
+- 03. 卡片 [3.16 更新卡手机号](https://api-docs.tevau.io/288898845e0.md): 此接口可以更新卡的手机号。
+- 03. 卡片 [3.17 更新卡邮箱](https://api-docs.tevau.io/288898882e0.md): 此接口可以更新卡的邮箱。
+- 03. 卡片 [3.18 修改卡Pin](https://api-docs.tevau.io/354781449e0.md): 修改实体卡卡Pin接口
+- 04. 物流信息查询 [4.1 物流信息查询](https://api-docs.tevau.io/283621444e0.md): 创建卡返回的订单号查询。
+- 05. 预付款 [5.1 查询企业账户余额](https://api-docs.tevau.io/283621445e0.md): 用于查询企业账户的余额
+- 05. 预付款 [5.2 查询预付款账户交易列表](https://api-docs.tevau.io/323762936e0.md): 用于查询预付款账户交易流水记录
+- 05. 预付款 [5.3 查询企业账户余额（Fiat）](https://api-docs.tevau.io/391814377e0.md): 用于查询企业账户的余额
+- 06. 交易 [6.1 查询交易记录](https://api-docs.tevau.io/283621447e0.md): 用于查询指定卡的所有交易记录
+- 06. 交易 [6.2 查询单笔交易详情](https://api-docs.tevau.io/283621448e0.md): 用于查询单笔交易的交易过程
+- 07. 模拟交易 [7.1 模拟授权 (Authorisation)](https://api-docs.tevau.io/283621449e0.md): 模拟授权交易
+- 07. 模拟交易 [7.2 模拟结算 (Clearing)](https://api-docs.tevau.io/283621450e0.md): 模拟结算交易
+- 07. 模拟交易 [7.3 模拟退款 (Refund)](https://api-docs.tevau.io/283621451e0.md): 模拟退款交易
+- 07. 模拟交易 [7.4 模拟退单 (Reversal)](https://api-docs.tevau.io/283621452e0.md): 
+- 07. 模拟交易 [7.5 模拟3DS (3DS)](https://api-docs.tevau.io/287726686e0.md): 
+- 07. 模拟交易 [7.6 模拟卡片状态](https://api-docs.tevau.io/291632541e0.md): 卡片变动模拟
+- 08. Webhook [8.1 KYC审核通知](https://api-docs.tevau.io/391815752e0.md): 1.客户 KYC 审核结果通知。若 KYC 信息及活体认证未通过，客户可重新提交。
+- 08. Webhook [8.2 卡片结果通知](https://api-docs.tevau.io/283621454e0.md): 1. 此接口为卡片通知，会有创建、充值、销毁、冻结、解冻通知类型。
+- 08. Webhook [8.3 调整卡余额的通知](https://api-docs.tevau.io/283621455e0.md): 1、卡余额调整后的通知；
+- 08. Webhook [8.4 授权3DS通知](https://api-docs.tevau.io/283621456e0.md): 1、授权3DS通知；
+- 08. Webhook [8.5 交易通知](https://api-docs.tevau.io/283621457e0.md): 此接口为交易通知，会有授权、清算、撤销、退款、交易、追加授权通知类型
+- 08. Webhook [8.6 物流状态变化通知](https://api-docs.tevau.io/283621458e0.md): 当实体卡创建后，物流状态有变动制作中、已发货则会通知。
+- 08. Webhook [8.7 Token通知](https://api-docs.tevau.io/382199751e0.md): 
+- 08. Webhook [8.8代收代付WebHook通知](https://api-docs.tevau.io/283621453e0.md): 成功接收后，需同步返回确认，示例{"code": "200","msg": "Received successfully"}；
+- 09. Fiat代收代付 [9.1 查询代收/代付银行列表](https://api-docs.tevau.io/391808987e0.md): 该接口versions==v1.1
+- 09. Fiat代收代付 [9.2 创建代收订单](https://api-docs.tevau.io/391808988e0.md): 该接口versions==v1
+- 09. Fiat代收代付 [9.3 创建代付订单](https://api-docs.tevau.io/391808989e0.md): 该接口versions==v1
+- 09. Fiat代收代付 [9.4 提现USDT](https://api-docs.tevau.io/391808990e0.md): 此接口直接把法币兑换成USDT后提现
+- 09. Fiat代收代付 [9.5 查询代收/代付订单](https://api-docs.tevau.io/391808991e0.md): 该接口versions==v1
+- 09. Fiat代收代付 [9.6 查询汇率](https://api-docs.tevau.io/391808992e0.md): 该接口versions==v1
+- 09. Fiat代收代付 [9.7 模拟代收/代付到账](https://api-docs.tevau.io/391808993e0.md): 1.8模拟代收/代付到账
+- 其他 [[Sandbox] 修改WebHook-Url](https://api-docs.tevau.io/392209499e0.md): 
